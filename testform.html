@@ -1,84 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href="./output.css" rel="stylesheet">
 	<title>Simple Test Form Game</title>
 </head>
 <body>
-	<h1>What's Your Favorite Day of the Week?</h1>
-	<button id="monday">Monday</button>
-	<button id="tuesday">Tuesday</button>
-	<button id="wednesday">Wednesday</button>
-	<button id="thursday">Thursday</button>
-	<button id="friday">Friday</button>
-	<button id="saturday">Saturday</button>
-	<button id="sunday">Sunday</button>
-
-	<h1>What's Your Favorite Activity?</h1>
-	<button id="reading">Reading a book</button>
-	<button id="movie">Watching a movie</button>
-	<button id="sports">Playing sports</button>
-	<button id="music">Listening to music</button>
-	<button id="games">Playing video games</button>
-	<button id="friends">Hanging out with friends</button>
-	<button id="travel">Traveling</button>
-
-	<h1>Result:</h1>
-	<p id="result"></p>
-
-	<script>
-		document.getElementById("monday").addEventListener("click", function() {
-			showResult("Monday");
-		});
-		document.getElementById("tuesday").addEventListener("click", function() {
-			showResult("Tuesday");
-		});
-		document.getElementById("wednesday").addEventListener("click", function() {
-			showResult("Wednesday");
-		});
-		document.getElementById("thursday").addEventListener("click", function() {
-			showResult("Thursday");
-		});
-		document.getElementById("friday").addEventListener("click", function() {
-			showResult("Friday");
-		});
-		document.getElementById("saturday").addEventListener("click", function() {
-			showResult("Saturday");
-		});
-		document.getElementById("sunday").addEventListener("click", function() {
-			showResult("Sunday");
-		});
-		document.getElementById("reading").addEventListener("click", function() {
-			showResult("Reading a book");
-		});
-		document.getElementById("movie").addEventListener("click", function() {
-			showResult("Watching a movie");
-		});
-		document.getElementById("sports").addEventListener("click", function() {
-			showResult("Playing sports");
-		});
-		document.getElementById("music").addEventListener("click", function() {
-			showResult("Listening to music");
-		});
-		document.getElementById("games").addEventListener("click", function() {
-			showResult("Playing video games");
-		});
-		document.getElementById("friends").addEventListener("click", function() {
-			showResult("Hanging out with friends");
-		});
-		document.getElementById("travel").addEventListener("click", function() {
-			showResult("Traveling");
-		});
-
-		function showResult(selection) {
-			var result = document.getElementById("result");
-			if (selection === "Tuesday" && document.getElementById("reading").clicked === true) {
-				result.textContent = "You're a Bookworm! You love to spend your free time curled up with a good book and a cup of coffee.";
-			} else if (selection === "Friday" && document.getElementById("sports").clicked === true) {
-				result.textContent = "You're a Sports Enthusiast! You live for the thrill of competition and the rush of adrenaline that comes with playing your favorite sports.";
-			} else {
-				result.textContent = "You're a Free Spirit! You're always up for an adventure and love to try new things.";
-			}
-		}
-	</script>
+	<h1 class="text-4xl font-bold mb-2 justify-center flex">What's Your Favorite Day of the Week?</h1>
+	<div class="flex justify-center P-5">
+		<button id="monday" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded P-5">Monday</button>
+		<button id="tuesday" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded P-5">Tuesday</button>
+	</div>
 </body>
 </html>
