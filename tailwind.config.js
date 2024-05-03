@@ -2,7 +2,10 @@
 module.exports = {
   content: ['./index.html','./testform.html'],
   theme: {
-    extend: {},
+    colors: {
+      'krem': '#FFF6E3',
+      'kremgelap': '#D7CFBF',
+    },extend: {},
   },
   plugins: [],
 }

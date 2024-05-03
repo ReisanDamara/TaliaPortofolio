@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+    <link href="custom.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
     <title>Document</title>
 </head>
-<body>
-    
-    <div class="h-screen">
+<body >
+  <div class="overflow-hidden bg-krem fixed top-0 w-full drop-shadow-md">
+    <h1 class="float-left block text-black text-center p-3 mx-5 no-underline font-bold">Talia Damara</h1>
+    <a href="#home" class="float-left block text-black text-center p-3 no-underline hover:scale-110 ">Home</a>
+    <a href="#profile" class="float-left block text-black text-center p-3 no-underline hover:scale-110">Profile</a>
+    <a href="#experience" class="float-left block text-black text-center p-3 no-underline hover:scale-110">Experience</a>
+  </div>
+
+    <div id="home" class="h-screen ">
         <div class="h-screen flex justify-center items-center">
             <img src="./image.jpg" alt="Talia Lewi Damara" class="rounded-full w-32 mr-5">
             <div>
@@ -23,31 +31,33 @@
             </div>
         </div>
     </div>
-    <div class="h-screen p-24">
-      <h1 class="text-4xl font-bold mb-2 justify-center flex">Profile</h1>
-        <div class="flex flex-col items-center p-5">
-            <div class="grid grid-cols-2 gap-4 w-2/3">
+    <div id="profile" class="h-screen bg-krem">
+      <div class=" w-1/2 h-full p-24">
+        <h1 class="text-4xl font-bold mb-2 justify-center flex">Profile</h1>
+        <div class="flex flex-col p-5">
+
               <div class="flex flex-col p-2 ">
-                <h2 class="text-lg font-bold mb-1 items-center">Tempat, Tanggal Lahir</h2>
-                <h2 class="text-lg items-center">Bandung, September 1996</h2>
+                <h2 class="text-lg font-bold mb-1 ">Tempat, Tanggal Lahir</h2>
+                <h2 class="text-lg">Bandung, September 1996</h2>
               </div>
               <div class="flex flex-col p-2">
-                <h2 class="text-lg font-bold mb-1 items-center">Whatsapp</h2>
-                <h2 class="text-lg items-center">0896 6988 1864</h2>
+                <h2 class="text-lg font-bold mb-1">Whatsapp</h2>
+                <h2 class="text-lg">0896 6988 1864</h2>
               </div>
               <div class="flex flex-col p-2">
-                <h2 class="tewxt-lg font-bold mb-1 items-center">Email</h2>
-                <h2 class="text-lg items-center">taliadamara@ymail.com</h2>
+                <h2 class="tewxt-lg font-bold mb-1">Email</h2>
+                <h2 class="text-lg">taliadamara@ymail.com</h2>
               </div>
               <div class="flex flex-col p-2">
-                <h2 class="text-lg font-bold mb-1 items-center">Alamat</h2>
-                <h2 class="text-lg items-center">Bandung</h2>
+                <h2 class="text-lg font-bold mb-1">Alamat</h2>
+                <h2 class="text-lg">Bandung</h2>
               </div>
-            </div>
+
           </div>
+        </div>
     </div>
-    <div class="h-screen p-24">
-      <div class="w-1/2 float-right p-5">
+    <div id="experience" class="h-screen  ">
+      <div class="w-1/2 float-right p-24 bg-krem h-full">
         <h1 class="text-2xl font-bold mb-2">Experience</h1>
         <div class="flex justify-between mb-4">
           <div class="flex items-center">
@@ -63,8 +73,8 @@
           </div>
         </div>
     </div>
-        <div class="border-r-2 border-gray-500 p-5 w-1/2">
-            <h1 class="text-2xl font-bold mb-2">Pendidikan</h1>
+        <div class=" p-24 w-1/2 h-full">
+            <h1 class="text-2xl font-bold mb-2 ">Pendidikan</h1>
             <div class="flex justify-between mb-4">
               <div class="flex items-center">
                 <div class="rounded-full h-4 w-4 bg-blue-500 mr-2"></div>
@@ -79,8 +89,12 @@
               </div>
             </div>
         </div>
-        
     </div>
+    <footer class="bg-kremgelap h-1/3">
+      <h6><img src="mail.png"> reisan.micros@gmail.com
+        <br><img src="phone.png">+62-858-6400-8030<br>
+        <hr></h6>
+    </footer>
 
 </body>
 </html>
