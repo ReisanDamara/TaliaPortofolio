@@ -21,3 +21,34 @@
     color: black;
   }
   
+
+
+  .footer {
+    background: #22303d;
+    background: linear-gradient(188deg, #22303d 13%, rgba(78, 77, 85, 1) 100%);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer h6 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 2%;
+    padding: 3%;
+    text-decoration: none;
+    margin-bottom: 0;
+  }
+  
+  .footer img {
+    width: auto;
+    height: auto;
+    justify-content: center;
+  
+  }
+  
+  .footer a  {
+    width: 33%;
+    height: auto;
+    margin: 20px;
+    margin-bottom: 0;
+  }
