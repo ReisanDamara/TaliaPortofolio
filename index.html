@@ -1,109 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
-    <link href="custom.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="custom.css" rel="stylesheet">
+  <script src="script.js"></script>
+  <title>Document</title>
 </head>
-<body >
-  <div class="overflow-hidden bg-krem fixed top-0 w-full drop-shadow-md">
-    <h1 class="float-left block text-black text-center p-3 mx-5 no-underline font-bold">Talia Damara</h1>
-    <a href="#home" class="float-left block text-black text-center p-3 no-underline hover:scale-110 ">Home</a>
-    <a href="#profile" class="float-left block text-black text-center p-3 no-underline hover:scale-110">Profile</a>
-    <!-- <a href="#experience" class="float-left block text-black text-center p-3 no-underline hover:scale-110">Experience</a> -->
+
+<body>
+  <div class="header">
+    <h1 class="site-title">Talia Damara</h1>
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#profile" class="nav-link">Profile</a>
   </div>
-  
-    <div id="home" class="h-screen ">
 
-        <div class="half-diagonal flex items-center justify-center">
-          <div class="h-screen flex justify-center items-center">
-              <img src="./image.jpg" alt="Talia Lewi Damara" class="rounded-full w-64 mr-5">
-              <div>
-                  <h1 class="text-5xl">Talia Lewi Damara</h1>
-                  <h2 class="text-2xl">M.Psi., Psikolog, CHA</h2>
-                  <div class="flex justify-center mt-5">
-                      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Contact Me</button>
-                      <a href="testform.html"><button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-5">Take A Test!</button></a>
-                  </div>
-              </div>
-          </div>    
+  <div id="home" class="home-section half-diagonal">
+    <div class="home-content">
+      <img src="./image.jpg" alt="Talia Lewi Damara" class="profile-img">
+      <div>
+        <h1 class="main-title">Talia Lewi Damara</h1>
+        <h2 class="subtitle">M.Psi., Psikolog, CHA</h2>
+        <h3 class="subtitle2">+62 896-6988-1864 / taliadamara@ymail.com</h3>
+        <div class="button-group">
+          <a href="https://wa.me/6289669881864"></a><button class="btn contact-btn">Contact Me</button></a>
         </div>
-    </div>
-    
-    <div id="profile" class="h-screen bg-krem pt-20">
-      <h1 class="text-4xl font-bold mb-10 justify-center flex ">Profile</h1>
-      <div class=" w-1/2 p-10 float-left border-r-2 border-black border-solid">  
-        <div class="flex flex-col">
-          <div class="flex flex-col p-2 ">
-            <h2 class="text-lg font-bold mb-1 ">Tempat, Tanggal Lahir</h2>
-            <h2 class="text-lg">Bandung, September 1996</h2>
-          </div>
-          <div class="flex flex-col p-2">
-            <h2 class="text-lg font-bold mb-1">Whatsapp</h2>
-            <h2 class="text-lg">0896 6988 1864</h2>
-          </div>
-          <div class="flex flex-col p-2">
-            <h2 class="tewxt-lg font-bold mb-1">Email</h2>
-            <h2 class="text-lg">taliadamara@ymail.com</h2>
-          </div>
-          <div class="flex flex-col p-2">
-            <h2 class="text-lg font-bold mb-1">Alamat</h2>
-            <h2 class="text-lg">Bandung</h2>
-          </div>
+        <div class="button-group">
+          <a href="testform.html?test=kecemasan"><button class="btn test-btn">Tes Kecemasan</button></a>
+          <a href="testform.html?test=stress"><button class="btn test-btn">Tes Stress</button></a>
         </div>
       </div>
-      <div class="w-1/2 float-right p-10">
-        <h1 class="text-2xl font-bold mb-2">Experience</h1>
-        <div class="flex justify-between mb-4">
-          <div class="flex items-center">
-            <div class="rounded-full h-4 w-4 bg-blue-500 mr-2"></div>
-            <p class="text-lg"> Biro Psikologi Bina Alma Mandiri</p>
-          </div>
-  
-        </div>
-        <div class="flex justify-between mb-4">
-          <div class="flex items-center">
-            <div class="rounded-full h-4 w-4 bg-blue-500 mr-2"></div>
-            <p class="text-lg">Biro Psikologi Personale</p>
-          </div>
-        </div>
-        <h1 class="text-2xl font-bold mb-2 mt-5">Pendidikan</h1>
-            <div class="flex justify-between mb-4">
-              <div class="flex items-center">
-                <div class="rounded-full h-4 w-4 bg-blue-500 mr-2"></div>
-                <p class="text-lg">Magister Psikologi Profesi – Klinis Dewasa</p>
-              </div>
+    </div>
+  </div>
 
-            </div>
-            <div class="flex justify-between mb-4">
-              <div class="flex items-center">
-                <div class="rounded-full h-4 w-4 bg-blue-500 mr-2"></div>
-                <p class="text-lg">Graphology Comprehensive by KAROHS</p>
-              </div>
-            </div>
+  <div id="profile" class="profile-section ">
+    <h1 class="section-title">Profile</h1>
+    <div class="profile-content">
+      <div class="education">
+        <h2 class="subsection-title">Pendidikan</h2>
+        <div class="education-item">
+          <div class="bullet-point"></div>
+          <p>Magister Psikologi Profesi – Klinis Dewasa</p>
+        </div>
+        <div class="education-item">
+          <div class="bullet-point"></div>
+          <p>Certified Handwriting Analyst (CHA) by KAROHS</p>
         </div>
       </div>
-      
+      <div class="experience">
+        <h2 class="subsection-title">Experience</h2>
+        <div class="experience-item">
+          <div class="bullet-point"></div>
+          <p>Biro Psikologi Personale</p>
+        </div>
+        <div class="experience-item">
+          <div class="bullet-point"></div>
+          <p>Biro Psikologi Get Spirit</p>
+        </div>
+        <div class="experience-item">
+          <div class="bullet-point"></div>
+          <p>Biro Psikologi Bina Alma Mandiri</p>
+        </div>
+      </div>
     </div>
-    <div class="footer">
-      
-      
-      <h6>Talia Lewi Damara
-        <br>
-        taliadamara10@gmail.com
-        <hr>
-        <a href="https://www.linkedin.com/in/reisan-lewi-damara-83992b223">this website created by:
+    <br>
+    <div class="profile-content">
+      <div class="education">
+        <h2 class="subsection-title">Layanan</h2>
+        <div class="education-item">
+          <div class="bullet-point"></div>
+          <p>Konsultasi Online (Chat / Call / Video Call)</p>
+        </div>
+        <div class="education-item">
+          <div class="bullet-point"></div>
+          <p>Konsultasi Onsite (Tatap Muka) </p>
+        </div>
+        <div class="education-item">
+          <div class="bullet-point"></div>
+          <p>Psikotes Pendidikan</p>
+        </div>
+        <div class="education-item">
+          <div class="bullet-point"></div>
+          <p>Psikotes dan Assessment untuk Industri</p>
+        </div>
+        <div class="education-item">
+          <div class="bullet-point"></div>
+          <p>Tes Kepribadian MCMI-IV</p>
+        </div>
+      </div>
+      <div class="experience">
+        <h2 class="subsection-title">Menangani Masalah Psikologi
+        </h2>
+        <div class="experience-item">
+          <div class="bullet-point"></div>
+          <p>Konsultasi Pendidikan, Penjurusan / Minat Bakat
+          </p>
+        </div>
+        <div class="experience-item">
+          <div class="bullet-point"></div>
+          <p>Career Development
+          </p>
+        </div>
+        <div class="experience-item">
+          <div class="bullet-point"></div>
+          <p>Kecocokan Karier / Pekerjaan
+          </p>
+        </div>
+        <div class="experience-item">
+          <div class="bullet-point"></div>
+          <p>Self-Esteem
+          </p>
+        </div>
+        <div class="experience-item">
+          <div class="bullet-point"></div>
+          <p>Management Stress
+          </p>
+        </div>
+        <div class="experience-item">
+          <div class="bullet-point"></div>
+          <p>Social Anxiety (lingkup pertemanan / kerja)
+          </p>
+        </div>
+        <div class="experience-item">
+          <div class="bullet-point"></div>
+          <p>Persiapan Menikah / Pre-Marital
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h6 class="footer-text">
+      Talia Lewi Damara<br>
+      taliadamara10@gmail.com
+      <hr>
+      <a href="https://www.linkedin.com/in/reisan-lewi-damara-83992b223">this website created by:
         <br>reisan.micros@gmail.com
         <br>+62-858-6400-8030<br>
-        
-        </a>
-      </h6>
-
-    </div>
+      </a>
+    </h6>
+  </div>
 </body>
+
 </html>
