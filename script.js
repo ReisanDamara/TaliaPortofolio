@@ -45,6 +45,10 @@ if (type == "kecemasan") {
   totalQuestions = 20;
 }
 else if (type == "stress") {
+  opt1.textContent = "tidak Sesuai";
+  opt2.textContent = "kadang"
+  opt3.textContent = "sering"
+  opt4.textContent = "sangat sering"
   optionsList = [
     "Saya merasa bahwa diri saya menjadi marah karena hal-hal sepele.",
     "Saya merasa bibir saya sering kering.",
