@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -39,6 +42,7 @@ body {
   display: flex;
   align-items: center;
   z-index: 1;
+  transition: all 200ms ease-in-out;
 }
 
 .site-title {
@@ -270,7 +274,9 @@ body {
 }
 
 
-
+.layanan,.profile{
+  transition: all 200ms ease-in-out;
+}
 
 .layanan-content {
   display: flex;

@@ -45,10 +45,10 @@ if (type == "kecemasan") {
   totalQuestions = 20;
 }
 else if (type == "stress") {
-  opt1.textContent = "tidak Sesuai";
-  opt2.textContent = "kadang"
-  opt3.textContent = "sering"
-  opt4.textContent = "sangat sering"
+  opt1.textContent = "Tidak Sesuai";
+  opt2.textContent = "Kadang"
+  opt3.textContent = "Sering"
+  opt4.textContent = "Sangat Sering"
   optionsList = [
     "Saya merasa bahwa diri saya menjadi marah karena hal-hal sepele.",
     "Saya merasa bibir saya sering kering.",
@@ -142,8 +142,10 @@ function showResult() {
   document.getElementById("resultText").textContent = `Your result is: ${resultText}`;
 
   // Hide the form and show the popup
-  document.getElementById("form").style.display = "none";
-  document.getElementById("popup").style.display = "block";
+  // document.getElementById("form").style.display = "none";
+  // document.getElementById("popup").style.display = "block";
+  fadeOut(document.getElementById("form"),200);
+  setTimeout(() => fadeIn(document.getElementById("popup"),200), 200);
 }
 
 async function submit() {
@@ -172,8 +174,10 @@ async function submit() {
     }
   }
 
-  document.getElementById("inputnama").style.display = "none";
-  document.getElementById("hasil").style.display = "block";
+  // document.getElementById("inputnama").style.display = "none";
+  // document.getElementById("hasil").style.display = "block";
+  fadeOut(document.getElementById("inputnama"),200);
+  setTimeout(() => fadeIn(document.getElementById("hasil"),200), 200);
 }
 
 var selectedValue = 0;
@@ -214,3 +218,20 @@ opt4.addEventListener('click', () => {
   console.log(selectedValue);
   updateQuestionText();
 });
+
+
+function fadeOut(element, duration) {
+  element.style.transition = `opacity ${duration}ms ease`;
+  element.style.opacity = 0;
+  setTimeout(() => {
+    element.style.display = 'none'; // Hide the element after fade-out
+  }, duration); // Match the transition duration
+}
+
+function fadeIn(element, duration) {
+  element.style.display = 'block'; // Make the element visible
+  setTimeout(() => {
+    element.style.transition = `opacity ${duration}ms ease`;
+    element.style.opacity = 1;
+  }, 10); // Small delay to ensure the element is visible before the transition starts
+}
