@@ -111,7 +111,7 @@ function updateQuestionText() {
 
 function showResult() {
   let resultText;
-  if(type == "stress"){
+  if (type == "stress") {
     if (selectedValue <= 30) {
       resultText = "Normal";
     } else if (selectedValue <= 40) {
@@ -123,7 +123,7 @@ function showResult() {
     } else {
       resultText = "Sangat Berat";
     }
-  } else if(type == "kecemasan"){
+  } else if (type == "kecemasan") {
     if (selectedValue <= 7) {
       resultText = "Normal";
     } else if (selectedValue <= 9) {
@@ -136,7 +136,7 @@ function showResult() {
       resultText = "Sangat Berat";
     }
   }
-  
+
 
   // Display the result in the popup
   document.getElementById("resultText").textContent = `Your result is: ${resultText}`;
@@ -150,24 +150,28 @@ async function submit() {
   const inputElement = document.getElementById('textInput');
   console.log(inputElement.value);
   console.log(selectedValue);
-  if(type == "stress"){
-    const { data, error } = await supabases
-    .from('stress')
-    .insert([
-      { 'nama': inputElement.value ,'skor': selectedValue },
-    ])
-    .select()
-    console.log(error ? error : data);
-  } else if(type == "kecemasan"){
-    const { data, error } = await supabases
-  .from('kecemasan')
-  .insert([
-    { 'nama': inputElement.value ,'skor': selectedValue },
-  ])
-  .select()
-  console.log(error ? error : data);
+  if (!inputElement.value || inputElement.value == 0) {
+
+
+    if (type == "stress") {
+      const { data, error } = await supabases
+        .from('stress')
+        .insert([
+          { 'nama': inputElement.value, 'skor': selectedValue },
+        ])
+        .select()
+      console.log(error ? error : data);
+    } else if (type == "kecemasan") {
+      const { data, error } = await supabases
+        .from('kecemasan')
+        .insert([
+          { 'nama': inputElement.value, 'skor': selectedValue },
+        ])
+        .select()
+      console.log(error ? error : data);
+    }
   }
-  
+
   document.getElementById("inputnama").style.display = "none";
   document.getElementById("hasil").style.display = "block";
 }

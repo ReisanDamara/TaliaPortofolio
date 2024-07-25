@@ -3,12 +3,25 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-}
 
+  }
+  
+  body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://vzgczkqwlzrxxpubqweb.supabase.co/storage/v1/object/sign/FOTO/5328478.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJGT1RPLzUzMjg0NzguanBnIiwiaWF0IjoxNzIxODgzMzAxLCJleHAiOjQ4NzU0ODMzMDF9.PXWDQkoMh38LgU786ArL7ZGGil-t1dnqgIlD3tqZhTk&t=2024-07-25T04%3A55%3A01.204Z");
+    background-size: cover;
+    opacity: 30%; /* adjust the opacity to your liking */
+    z-index: -1;
+  }
 .form-container {
     position: relative;
-    width: 60%;
-    height: 30vw;
+    width: 50%;
+    height: 60vh;
     margin: 5% auto;
     background-color: #FFF6E3;
     padding: 5%;
@@ -18,7 +31,7 @@ body {
 
 .progres:before {
   background-color: initial;
-  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  
   border-radius: 125px;
   content: "";
   height: 50%;
@@ -68,13 +81,13 @@ body {
 
 .button-container {
     position: absolute;
-    bottom: 20px;
-    width: 88%;
+    bottom: 5%;
+    width: 85%;
 }
 
 .option-button {
     width: 100%;
-    height: 5vw;
+    height: 7vh;
     border-radius: 100px;
     margin-top: 1%;
 }
@@ -111,13 +124,13 @@ body {
 
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
     .form-container {
-
+        margin: 5% auto ;
         position: relative;
         width: 70%;
         height: 85vh;
-        margin: 10%;
+
         background-color: #FFF6E3;
         padding: 5%;
         border-radius: 50px;
@@ -179,6 +192,7 @@ body {
     }
 
     .btn {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         display: inline-block;
         margin-bottom: 0;
         font-weight: 400;
@@ -207,16 +221,47 @@ body {
     height: 100%;
     align-content: center;
     text-align: center;
-
+    
 }
 
 input {
+    height: 5vh;
+    width: 70%;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+
+    text-align: center;
     margin-right: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgba(0,0,0,.87);
+    border-bottom-color: rgba(0,0,0,.42);
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: normal; 
+    letter-spacing: .009375em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    align-self: flex-end;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 16px 6px;
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 4px 4px 0 0;
+    background: #FFF6E3;
+    height: 56px;
+   
+
 }
+input:hover{
+    border-bottom-color: rgba(0,0,0,.87);
+    background: #ececec;
+}
+input:focus{
+    border-color: #337ab7;
+    outline: none;
+}
+
 
 /* 
 body {
