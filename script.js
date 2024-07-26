@@ -152,7 +152,7 @@ async function submit() {
   const inputElement = document.getElementById('textInput');
   console.log(inputElement.value);
   console.log(selectedValue);
-  if (!inputElement.value || inputElement.value == 0) {
+  if (!inputElement.value || inputElement.value != "") {
 
 
     if (type == "stress") {
