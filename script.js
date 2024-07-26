@@ -110,36 +110,48 @@ function updateQuestionText() {
 }
 
 function showResult() {
-  let resultText;
-  if (type == "stress") {
-    if (selectedValue <= 30) {
-      resultText = "Normal";
-    } else if (selectedValue <= 40) {
-      resultText = "Ringan";
-    } else if (selectedValue <= 60) {
-      resultText = "Sedang";
-    } else if (selectedValue <= 70) {
-      resultText = "Berat";
-    } else {
-      resultText = "Sangat Berat";
-    }
-  } else if (type == "kecemasan") {
-    if (selectedValue <= 7) {
-      resultText = "Normal";
-    } else if (selectedValue <= 9) {
-      resultText = "Ringan";
-    } else if (selectedValue <= 14) {
-      resultText = "Sedang";
-    } else if (selectedValue <= 19) {
-      resultText = "Berat";
-    } else {
-      resultText = "Sangat Berat";
-    }
+  let resultText,resultColor;
+ if (type == "stress") {
+  if (selectedValue <= 30) {
+    resultText = "Normal";
+    resultColor = "green";
+  } else if (selectedValue <= 40) {
+    resultText = "Ringan";
+    resultColor = "yellow";
+  } else if (selectedValue <= 60) {
+    resultText = "Sedang";
+    resultColor = "orange";
+  } else if (selectedValue <= 70) {
+    resultText = "Berat";
+    resultColor = "red";
+  } else {
+    resultText = "Sangat Berat";
+    resultColor = "darkred"; // Optional for "Sangat Berat"
   }
+} else if (type == "kecemasan") {
+  if (selectedValue <= 7) {
+    resultText = "Normal";
+    resultColor = "green";
+  } else if (selectedValue <= 9) {
+    resultText = "Ringan";
+    resultColor = "yellow";
+  } else if (selectedValue <= 14) {
+    resultText = "Sedang";
+    resultColor = "orange";
+  } else if (selectedValue <= 19) {
+    resultText = "Berat";
+    resultColor = "red";
+  } else {
+    resultText = "Sangat Berat";
+    resultColor = "darkred"; // Optional for "Sangat Berat"
+  }
+}
 
+// Display the result in the popup
+const resultElement = document.getElementById("resultText");
+resultElement.textContent = resultText;
+resultElement.style.color = resultColor; // Set text color based on result
 
-  // Display the result in the popup
-  document.getElementById("resultText").textContent = `Your result is: ${resultText}`;
 
   // Hide the form and show the popup
   // document.getElementById("form").style.display = "none";

@@ -128,10 +128,13 @@ body {
 }
 
 #resultText{
-    font-size:10vw;
+    font-size:5vw;
 }
 
 @media only screen and (max-width: 800px) {
+    #resultText{
+        font-size:5vh;
+    }
     .form-container {
         margin: 5% auto ;
         position: relative;
