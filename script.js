@@ -48,7 +48,7 @@ else if (type == "stress") {
   opt1.textContent = "Tidak Sesuai";
   opt2.textContent = "Kadang"
   opt3.textContent = "Sering"
-  opt4.textContent = "Sangat Sering"
+  opt4.textContent = "Sangat Sesuai"
   optionsList = [
     "Saya merasa bahwa diri saya menjadi marah karena hal-hal sepele.",
     "Saya merasa bibir saya sering kering.",
@@ -110,60 +110,78 @@ function updateQuestionText() {
 }
 
 function showResult() {
-  let resultText,resultColor;
- if (type == "stress") {
-  if (selectedValue <= 30) {
-    resultText = "Normal";
-    resultColor = "green";
-  } else if (selectedValue <= 40) {
-    resultText = "Ringan";
-    resultColor = "yellow";
-  } else if (selectedValue <= 60) {
-    resultText = "Sedang";
-    resultColor = "orange";
-  } else if (selectedValue <= 70) {
-    resultText = "Berat";
-    resultColor = "red";
-  } else {
-    resultText = "Sangat Berat";
-    resultColor = "darkred"; // Optional for "Sangat Berat"
-  }
-} else if (type == "kecemasan") {
-  if (selectedValue <= 7) {
-    resultText = "Normal";
-    resultColor = "green";
-  } else if (selectedValue <= 9) {
-    resultText = "Ringan";
-    resultColor = "yellow";
-  } else if (selectedValue <= 14) {
-    resultText = "Sedang";
-    resultColor = "orange";
-  } else if (selectedValue <= 19) {
-    resultText = "Berat";
-    resultColor = "red";
-  } else {
-    resultText = "Sangat Berat";
-    resultColor = "darkred"; // Optional for "Sangat Berat"
-  }
-}
+  let resultText, resultColor, resultMessage;
 
-// Display the result in the popup
-const resultElement = document.getElementById("resultText");
-resultElement.textContent = resultText;
-resultElement.style.color = resultColor; // Set text color based on result
+  if (type == "stress") {
+    if (selectedValue <= 30) {
+      resultText = "Normal";
+      resultColor = "green";
+      resultMessage = "Wow! Kamu sedang berada di kondisi yang baik. Pertahankan gaya hidup sehatmu! 🌟 (Fun fact: Tertawa selama 10-15 menit bisa membakar sekitar 40 kalori!)";
+    } else if (selectedValue <= 40) {
+      resultText = "Ringan";
+      resultColor = "yellow";
+      resultMessage = "Hei! Tingkat stresmu ringan, jadi tidak ada yang perlu dikhawatirkan. Mungkin sedikit relaksasi bisa membantu. 🌼 (Fun fact: Mendengarkan musik yang menenangkan bisa mengurangi tekanan darah dan menurunkan kadar hormon stres!)";
+    } else if (selectedValue <= 60) {
+      resultText = "Sedang";
+      resultColor = "orange";
+      resultMessage = "Kamu sedang mengalami stres tingkat sedang. Jangan lupa untuk mengambil waktu untuk dirimu sendiri dan relaksasi. 🌿 (Fun fact: Menghabiskan waktu di alam dapat menurunkan tingkat kortisol dan meningkatkan suasana hati!)";
+    } else if (selectedValue <= 70) {
+      resultText = "Berat";
+      resultColor = "red";
+      resultMessage = "Stres kamu cukup tinggi saat ini. Penting untuk mencari dukungan dan mengambil langkah-langkah untuk menguranginya. 🌱 (Fun fact: Olahraga teratur dapat meningkatkan produksi endorfin, yang membantu mengurangi stres dan meningkatkan kesejahteraan!)";
+    } else {
+      resultText = "Sangat Berat";
+      resultColor = "darkred";
+      resultMessage = "Stres kamu sangat tinggi. Sangat penting untuk mencari bantuan profesional dan mengambil langkah-langkah serius untuk mengelola stres ini. 🌲 (Fun fact: Berjalan-jalan di alam bisa membantu menenangkan pikiran dan mengurangi kecemasan!)";
+    }
+  } else if (type == "kecemasan") {
+    if (selectedValue <= 7) {
+      resultText = "Normal";
+      resultColor = "green";
+      resultMessage = "Wow! Kamu dalam kondisi yang baik dan tenang. Teruskan dengan gaya hidup positifmu! 🌟 (Fun fact: Menghabiskan waktu bersama hewan peliharaan dapat mengurangi kecemasan dan meningkatkan suasana hati!)";
+    } else if (selectedValue <= 9) {
+      resultText = "Ringan";
+      resultColor = "yellow";
+      resultMessage = "Kamu mengalami sedikit kecemasan, tetapi tidak perlu khawatir. Luangkan waktu untuk dirimu sendiri dan nikmati kegiatan yang kamu sukai. 🌼 (Fun fact: Aromaterapi dengan minyak lavender bisa membantu menurunkan tingkat kecemasan!)";
+    } else if (selectedValue <= 14) {
+      resultText = "Sedang";
+      resultColor = "orange";
+      resultMessage = "Tingkat kecemasanmu sedang. Jangan lupa untuk beristirahat dan mencari cara-cara relaksasi yang efektif. 🌿 (Fun fact: Berlatih yoga dan meditasi dapat membantu menurunkan kecemasan dan meningkatkan kesejahteraan emosional!)";
+    } else if (selectedValue <= 19) {
+      resultText = "Berat";
+      resultColor = "red";
+      resultMessage = "Kamu mengalami kecemasan yang cukup tinggi saat ini. Pertimbangkan untuk mencari dukungan dan berbicara dengan seseorang yang dapat membantu. 🌱 (Fun fact: Menulis jurnal tentang perasaan dan pikiranmu dapat membantu mengurangi kecemasan dan memberikan wawasan yang berguna!)";
+    } else {
+      resultText = "Sangat Berat";
+      resultColor = "darkred";
+      resultMessage = "Kamu mengalami kecemasan yang sangat tinggi. Sangat penting untuk mencari bantuan profesional dan mengambil langkah-langkah serius untuk mengelola kecemasan ini. 🌲 (Fun fact: Berjalan-jalan di alam bisa membantu menenangkan pikiran dan mengurangi kecemasan!)";
+    }
+  }
+
+  // Display the result in the popup
+  const resultElement = document.getElementById("resultText");
+  const message = document.getElementById("funfact");
+  message.textContent = resultMessage;
+  resultElement.textContent = resultText;
+  resultElement.style.color = resultColor; // Set text color based on result
 
 
   // Hide the form and show the popup
   // document.getElementById("form").style.display = "none";
   // document.getElementById("popup").style.display = "block";
-  fadeOut(document.getElementById("form"),200);
-  setTimeout(() => fadeIn(document.getElementById("popup"),200), 200);
+  fadeOut(document.getElementById("form"), 200);
+  setTimeout(() => fadeIn(document.getElementById("popup"), 200), 200);
 }
 
 async function submit() {
   const inputElement = document.getElementById('textInput');
   console.log(inputElement.value);
   console.log(selectedValue);
+  const hasiltest = document.getElementById("hasilTest");
+  if (inputElement && hasiltest) {
+    hasiltest.textContent = "Hasil Tes " + inputElement.value;
+  } 
+
   if (!inputElement.value || inputElement.value != "") {
 
 
@@ -188,8 +206,8 @@ async function submit() {
 
   // document.getElementById("inputnama").style.display = "none";
   // document.getElementById("hasil").style.display = "block";
-  fadeOut(document.getElementById("inputnama"),200);
-  setTimeout(() => fadeIn(document.getElementById("hasil"),200), 200);
+  fadeOut(document.getElementById("inputnama"), 200);
+  setTimeout(() => fadeIn(document.getElementById("hasil"), 200), 200);
 }
 
 var selectedValue = 0;
@@ -247,3 +265,17 @@ function fadeIn(element, duration) {
     element.style.opacity = 1;
   }, 10); // Small delay to ensure the element is visible before the transition starts
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const inputElement = document.getElementById("textInput");
+  const submitButton = document.getElementById("submitButton");
+
+  // Add event listener to input field to enable/disable submit button based on input value
+  inputElement.addEventListener("input", function() {
+    if (inputElement.value.trim() === "") {
+      submitButton.disabled = true;
+    } else {
+      submitButton.disabled = false;
+    }
+  });
+});

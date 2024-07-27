@@ -19,13 +19,20 @@
             <div id="inputnama" class="inputnama">
                 <h2 for="textInput">Masukan Nama untuk melihat hasil</H2>
                 <input type="text" id="textInput" name="textInput">
-                <button type="button" class="btn btn-primary option-button" onclick="submit()">Submit</button>
+                <div class="button-container">
+                <button type="button" id="submitButton" class="btn btn-primary option-button" onclick="submit()">Submit</button>
             </div>
+        </div>
             <div id="hasil" class="hasil question-text" style="display: none;">
-                <h1>Hasil Tes</h2>
-                <p id="resultText"></p>
-                <a href="index.html"><button class="btn btn-primary option-button">Tutup</button></a>
+                <h1 id="hasilTest">Hasil Tes</h2>
+                    <p id="resultText"></p>
+                    <div class="ff">
+                        <p id="funfact">test<br>asdad<br>asdad<br>asdad</p>
+                    </div>
+                    <div class="button-container">
+                    <a href="index.html"><button class="btn btn-primary option-button">Tutup</button></a>
             </div>
+        </div>
         </div>
     </div>
     <form id="form" class="form-container">
