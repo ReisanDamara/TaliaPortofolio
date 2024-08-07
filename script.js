@@ -19,6 +19,7 @@ function getQueryParam(param) {
 
 let type = getQueryParam('test');
 if (type == "kecemasan") {
+  document.getElementById("aaa").style.display = "block";
   optionsList = [
     "Mati rasa / terasa gatal",
     "Merasa panas",
